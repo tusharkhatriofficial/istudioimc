@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>imcoded Innovation Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff; /* Secondary color */
+      color: #6901FF; /* Primary color */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100vh;
+      text-align: left;
+      position: relative;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 100px;
+      text-align: center;
+    }
+    form {
+      width: 100%;
+      max-width: 500px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #f0f0f0;
+      margin-top: 200px;
+    }
+    input[type="checkbox"] {
+      margin-bottom: 10px;
+    }
+    label {
+      color: black;
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+    }
+    #formFields {
+      display: none;
+      width: 100%;
+    }
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="submit"] {
+      width: calc(100% - 20px);
+      margin-bottom: 10px;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #6901FF; /* Primary color */
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #6901FF; /* Primary color */
+      color: #ffffff; /* Secondary color */
+      cursor: pointer;
+    }
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+      flex-shrink: 0; /* Prevent footer from growing */
+      background-color: #ffffff; /* Secondary color */
+      color: #6901FF; /* Primary color */
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #f0f0f0; /* Primary color */
+      color: black; /* Secondary color */
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+      position: fixed;
+      top: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    nav ul li {
+      margin-right: 20px;
+    }
+    nav ul li:last-child {
+      margin-right: 0;
+    }
+    nav ul li a {
+      color: black; /* Secondary color */
+      text-decoration: none;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .logo-text{
+      font-size: 2em; /* Adjust the font size to your desired value */
+    }
+
+    .logo-subtitle {
+      margin-left: 5px;
+      font-size: 0.8em;
+    
+    }
+
+    /* Media Queries for Mobile */
+    @media (max-width: 768px) {
+      form {
+        width: 90%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="https://imcoded.com" style="text-decoration: none;">
+        <div class="logo">
+          <img src="https://www.imcoded.com/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fxcuqahb2st38%2Fimcoded%2Fscaled_logo.png%3FupdatedAt%3D1689662334767&w=64&q=75" alt="Logo">
+          <span class="logo-text">imcoded</span>
+        </div>
+      </a>
+      <!-- <span class="logo-subtitle">Innovation Studio</span> -->
+      <ul>
+        <li><a href="/">Innovation Studio</a></li>
+        <!-- <li><a href="#">Main Website</a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <!-- <h1>imcoded Innovation Studio</h1> -->
+  <!-- action="/submit" -->
+  <form action="https://formsubmit.co/support@imcoded.com" method="POST" id="appTypeForm">
+    <!-- submitform hidden fields are here -->
+    <input type="hidden" name="_next" value="http://innovate.imcoded.com/thankyou">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_cc" value="hello@tusharkhatri.in">
+    <input type="hidden" name="_autoresponse" value="Here's what we received! Will reach out to you soon.">
+
+    <div style="border-radius: 10px; background-color: #ffffff; padding: 20px;">
+      <label for="appType">What type of software are you looking for?</label>
+      <br>
+      <input type="checkbox" id="webApp" name="appType" value="webApp">
+      <label for="webApp">Web Application</label>
+      <br>
+      <input type="checkbox" id="mobileApp" name="appType" value="mobileApp">
+      <label for="mobileApp">Mobile Application</label>
+      <br><br>
+      
+      <div id="formFields">
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="email">Email:</label>
+        <br>
+        <input type="email" id="email" name="email">
+        <br>
+        <label for="whatsapp">WhatsApp Number:</label>
+        <br>
+        <input type="text" id="whatsapp" name="whatsapp">
+        <br>
+        <label for="appDescription">Description of your imagined application:</label>
+        <br>
+        <textarea id="appDescription" name="appDescription"></textarea>
+        <br>
+        <label for="appFeatures">Features of the app (MVP):</label>
+        <br>
+        <textarea id="appFeatures" rows="8" name="appFeatures"></textarea>
+        <br>
+        <input type="submit" value="Get Quote">
+      </div>
+    </div>
+  </form>
+  
+  <footer>
+    <p>support@imcoded.com</p>
+  </footer>
+
+  <script>
+    const appTypeForm = document.getElementById('appTypeForm');
+    const formFields = document.getElementById('formFields');
+    
+    appTypeForm.addEventListener('change', function() {
+      formFields.style.display = this.webApp.checked || this.mobileApp.checked ? 'block' : 'none';
+    });
+  </script>
+</body>
+</html>
